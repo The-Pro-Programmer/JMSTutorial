@@ -22,4 +22,28 @@ function App() {
   );
 }
 
+const x = 1;
+//x = 2;    // TypeError: Assignment to constant variable.
+
+function sayHello(){
+
+  console.log("Declaring vairables using var");
+  for(var i=0; i<5; i++){
+    console.log(i);
+  }
+  console.log("Ourside loop: " + i);
+
+  console.log("Declaring vairables using let");
+  for(let j=0; j<10; j+=2){
+    console.log(j);
+  }
+  //console.log(j); // Compile error: 'j' is not defined  no-undef
+
+  console.log("Const: " + x)
+
+
+}
+
+sayHello();
+
 export default App;
